@@ -1,0 +1,10 @@
+
+
+##### EMBEDDED SERVER CONFIGURATION (ServerProperties)  ####
+# Server HTTP port.
+server.port=8089 
+
+
+##### Application properties: ####
+# Todas la prpiedades que se pueden configurar de Spring en: 
+#         http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
