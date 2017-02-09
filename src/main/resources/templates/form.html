@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="#" th:action="@{/example3/addperson}" th:object="${person}" method="post">
+		<p>Nombre: <input type="text" th:field="*{name}" /></p>
+		<p>Age: <input type="text" th:field="*{age}" /></p>
+		<p><input type="submit" value="Submit"/></p>
+	</form>
+	
+	El objeto person nos lo da el controlador vacio, y lo asociamos a los campor
+	con th:field="*{name}"
+
+</body>
+</html>
