@@ -10,7 +10,8 @@
 # ServerProperties
 server:
   port: 8089
-
+  
+ 
 # THYMELEAF (ThymeleafAutoConfiguration)
 spring: 
   thymeleaf: 
@@ -19,11 +20,13 @@ spring:
     prefix: classpath:/templates/    # Prefix that gets prepended to view names when building a URL.
     suffix: .html                    # Suffix that gets appended to view names when building a URL.
   
-#Banner
+# Banner
 banner:
   location: classpath:banner.txt     # Fichero que contiene el texto del banner que se muestra al arrancar el servidor.
      
- 
+
+
+      
 
 
 
