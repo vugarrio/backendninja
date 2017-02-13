@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import es.ugarrio.component.ExampleComponent;
 import es.ugarrio.model.Person;
+import es.ugarrio.service.ExampleService;
 
 @Controller
 @RequestMapping("/example")
@@ -22,10 +23,19 @@ public class ExampleController {
 	//Lo suyo es declarar estas constantes en un fichero dentro de un paquete contantes
 	public static final String EXAMPLE_VIEW = "example";
 	
+	
+	//Inyectamos un componente
+	@Autowired
+	@Qualifier("exampleService")  //Injectamos el servicio.
+	private ExampleService exampleService;
+	
+	
 	//Inyectamos un componente
 	@Autowired
 	@Qualifier("ExampleComponent")  //Le indicamos que inyecte el componente ExampleComponent
 	private ExampleComponent exampleComponent;
+	
+	
 	
 	//Primera forma
 	@GetMapping("exampleString") //Nueva version 4.3 Sustituye a la linea de abajo
@@ -34,7 +44,7 @@ public class ExampleController {
 		
 		exampleComponent.sayHello();
 		
-		model.addAttribute("people", this.getPeople());		
+		model.addAttribute("people", exampleService.getListPeople());		
 		return EXAMPLE_VIEW;
 		
 		// Esta forma se suele usar para redirecciones o se tienen que insertar
@@ -45,7 +55,7 @@ public class ExampleController {
 	@RequestMapping(value="exampleMAV", method=RequestMethod.GET)
 	public ModelAndView exampleMAV() {
 		ModelAndView mav = new ModelAndView(EXAMPLE_VIEW);
-		mav.addObject("people", this.getPeople());
+		mav.addObject("people", exampleService.getListPeople());
 		
 		
 		return mav;
@@ -54,14 +64,5 @@ public class ExampleController {
 	}
 	
 	
-	private List<Person> getPeople() {
-		List<Person> people = new ArrayList<Person>();
-		people.add(new Person("Vicente 1 MAV", 41));
-		people.add(new Person("Vicente 2 MAV", 43));
-		people.add(new Person("Vicente 3 MAV", 51));
-		people.add(new Person("Vicente 3 MAV", 61));
-		people.add(new Person("Vicente 5 MAV", 71));
-		
-		return people;
-	}
+	
 }

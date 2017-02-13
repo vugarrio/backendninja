@@ -1,14 +1,16 @@
 package es.ugarrio.controller;
 
+import javax.validation.Valid;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -19,7 +21,7 @@ import es.ugarrio.model.Person;
 public class Example3FormController {
 	
 	//Creacion de Log. Al principio lo haremos con la libreria de apache, pero luego cambiaremos.
-	private static final Log LOGGER = LogFactory.getLog(Example3FormController.class);
+	private static final Log LOG = LogFactory.getLog(Example3FormController.class);
 	
 	public static final String FORM_VIEW = "form";
 	public static final String RESULT_VIEW = "result";
@@ -48,14 +50,26 @@ public class Example3FormController {
 	
 	//Obtiene los datos del formulario
 	@PostMapping("/addperson")
-	public ModelAndView addPerson(@ModelAttribute("person") Person person) {
+	public ModelAndView addPerson(@Valid @ModelAttribute("person") Person person, BindingResult bindingResult) {
 		
-		LOGGER.info("METHOD: 'addPerson' -- PARAMS: '" + person.toString()  + "'");
+		LOG.info("METHOD: 'addPerson' -- PARAMS: '" + person.toString()  + "'");
 		
-		ModelAndView mav = new ModelAndView(RESULT_VIEW);
-		mav.addObject("person", person);
+		ModelAndView mav = new ModelAndView();
 		
-		LOGGER.info("TEMPLATE: '" + RESULT_VIEW  + "'  -- DATA: '" + person + "'");	
+		if (bindingResult.hasErrors()) {
+			// Si hay errores, retornamos al formualrio.
+			mav.setViewName(FORM_VIEW);
+			LOG.info("TEMPLATE: '" + FORM_VIEW  + "'  -- DATA: bindingResult '" + bindingResult.toString() + "'");			
+			
+		} else {
+			// Si no hay errores vamos a la plantilla de la vista de persona.
+			mav.setViewName(RESULT_VIEW);
+			mav.addObject("person", person);
+			LOG.info("TEMPLATE: '" + RESULT_VIEW  + "'  -- DATA: '" + person + "'");	
+		}
+		
+		
+		
 		return mav;
 	}
 
