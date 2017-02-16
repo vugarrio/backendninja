@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<table>
+		<thead>
+			<tr>
+				<th>NAME</th>
+				<th>DESCRIPCION</th>
+				<th>PRICE</th>
+				<th>HOURS</th>  
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="course : ${courses}">
+				<td th:text="${course.name}">Name</td>
+				<td th:text="${course.description}">description</td>
+				<td th:text="${course.price}">Price</td>
+				<td th:text="${course.hours}">Hours</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<form action="#" method="post" th:action="@{/courses/addcourse}" th:object="${course}">
+		<% /* th:object="${course}": el controlador tiene que mandr un objeto course, aunque sea vacio */ %>  
+				
+		<p>Name: <input type="text" th:field="*{name}" /></p> 
+		<p>Descriptión: <input type="text" th:field="*{description}" /></p> 
+		<p>Price: <input type="text" th:field="*{price}" /></p> 
+		<p>Hours: <input type="text" th:field="*{hours}" /></p>
+		
+		<p>Hours: <input type="submit" value="Submit" /></p>  
+	
+	</form>
+
+</body>
+</html>

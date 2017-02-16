@@ -1,1 +1,3 @@
-Última clase:  Sección 5, Clase 38
+Maven con Java SDK 1.8
+
+Última clase:  Sección 6, Clase 44
