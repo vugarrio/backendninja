@@ -1,4 +1,4 @@
-package es.ugarrio.component;
+package es.ugarrio.backendninja.curso.component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,7 +8,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import es.ugarrio.controller.Example3FormController;
+import es.ugarrio.backendninja.curso.controller.Example3FormController;
 
 // Esta clase se va ejecutar siempre que se llame al controlador que la inyectemos.
 // Con los mentodos podremos capturar el antes y despues.

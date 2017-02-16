@@ -1,4 +1,4 @@
-package es.ugarrio.service.impl;
+package es.ugarrio.backendninja.curso.service.impl;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import es.ugarrio.entity.Course;
-import es.ugarrio.repository.CourseJpaRepository;
-import es.ugarrio.service.CourseService;
+import es.ugarrio.backendninja.curso.entity.Course;
+import es.ugarrio.backendninja.curso.repository.CourseJpaRepository;
+import es.ugarrio.backendninja.curso.service.CourseService;
 
 @Service("courseServiceImpl")
 public class CourseServiceImpl  implements CourseService{

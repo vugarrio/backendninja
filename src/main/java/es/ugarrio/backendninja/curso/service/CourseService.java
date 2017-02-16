@@ -1,8 +1,8 @@
-package es.ugarrio.service;
+package es.ugarrio.backendninja.curso.service;
 
 import java.util.List;
 
-import es.ugarrio.entity.Course;
+import es.ugarrio.backendninja.curso.entity.Course;
 
 public interface CourseService {
 	

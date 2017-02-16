@@ -1,4 +1,4 @@
-package es.ugarrio.controller;
+package es.ugarrio.backendninja.curso.controller;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

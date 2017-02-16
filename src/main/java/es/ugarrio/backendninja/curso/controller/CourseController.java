@@ -1,4 +1,4 @@
-package es.ugarrio.controller;
+package es.ugarrio.backendninja.curso.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import es.ugarrio.entity.Course;
-import es.ugarrio.service.impl.CourseServiceImpl;
+import es.ugarrio.backendninja.curso.entity.Course;
+import es.ugarrio.backendninja.curso.service.impl.CourseServiceImpl;
 
 @Controller
 @RequestMapping("/courses")

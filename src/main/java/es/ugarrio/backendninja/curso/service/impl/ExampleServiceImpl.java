@@ -1,4 +1,4 @@
-package es.ugarrio.service.impl;
+package es.ugarrio.backendninja.curso.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +7,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
 
-
-import es.ugarrio.model.Person;
-import es.ugarrio.service.ExampleService;
+import es.ugarrio.backendninja.curso.model.Person;
+import es.ugarrio.backendninja.curso.service.ExampleService;
 
 @Service("exampleService")
 public class ExampleServiceImpl implements ExampleService{

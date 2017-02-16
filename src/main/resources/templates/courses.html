@@ -24,9 +24,11 @@
 			</tr>
 		</tbody>
 	</table>
-
+	
+	
+	<h2>Add Course</h2>
 	<form action="#" method="post" th:action="@{/courses/addcourse}" th:object="${course}">
-		<% /* th:object="${course}": el controlador tiene que mandr un objeto course, aunque sea vacio */ %>  
+		<!--/* th:object="${course}": el controlador tiene que mandr un objeto course, aunque sea vacio */--> 
 				
 		<p>Name: <input type="text" th:field="*{name}" /></p> 
 		<p>Descriptión: <input type="text" th:field="*{description}" /></p> 

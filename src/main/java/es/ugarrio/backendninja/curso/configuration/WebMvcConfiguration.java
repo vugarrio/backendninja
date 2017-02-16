@@ -1,4 +1,4 @@
-package es.ugarrio.configuration;
+package es.ugarrio.backendninja.curso.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import es.ugarrio.component.RequestTimeInterceptor;
+import es.ugarrio.backendninja.curso.component.RequestTimeInterceptor;
 
 
 // Clase de configuración de Spring. Se ejecuta al iniciar.

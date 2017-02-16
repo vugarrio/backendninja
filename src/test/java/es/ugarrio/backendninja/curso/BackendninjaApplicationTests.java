@@ -1,4 +1,4 @@
-package es.ugarrio;
+package es.ugarrio.backendninja.curso;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

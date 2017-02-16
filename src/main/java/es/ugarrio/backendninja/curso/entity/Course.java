@@ -1,4 +1,4 @@
-package es.ugarrio.entity;
+package es.ugarrio.backendninja.curso.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

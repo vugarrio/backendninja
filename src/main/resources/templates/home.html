@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Indice</title>
+</head>
+<body>
+
+<h2>Indice test</h2>
+<ul>
+	<li>  <a th:href="@{/say/helloworld}">HelloWorld</a>. Primer controller + view | Crear un config donde añadir un INTERCEPTOR que escucha antes y despues de la llamada a un controller </li>
+	
+	<li>  <p><a th:href="@{/no_existe}">HelloWorld</a>. Pantalla 404 y 500 </p></li>
+	
+	<li>  
+		  <p><a th:href="@{/example/exampleString}">Gestion modelo forma 1</a> (Inyectar component o servicio) </p> 
+		  <p><a th:href="@{/example/exampleMAV}">Gestion modelo forma 2</a> (exampleMAV) </p>
+	</li>
+	
+	
+	<li>  
+		  <p><a th:href="@{/example2/request1(nm='JOIN',var2=n)}">Request GET 1</a> (Solicitar datos con parametros) </p> 
+		  <p><a th:href="@{/example2/request2/JOIN}">Request GET 2</a> (Solicitar datos con url) </p>
+	</li>
+	
+	<li>  
+		  <p><a th:href="@{/example3/}">HelloWorld</a>. Redicrección </p>
+		  <p><a th:href="@{/example3/showform}">HelloWorld</a>. Acceso formulario por GET, envio fomrulario y validacion. LOGS </p>
+	</li>
+	
+	<li>  
+		  <p><a th:href="@{/courses/listcourses}">Courses</a> Controller + Servicio + Repositorio + View </p> 
+	</li>	  
+	
+</ul>	
+
+</body>
+</html>

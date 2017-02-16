@@ -1,4 +1,4 @@
-package es.ugarrio.repository;
+package es.ugarrio.backendninja.curso.repository;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,8 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension;
 import org.springframework.stereotype.Repository;
 
-
-import es.ugarrio.entity.Course;
+import es.ugarrio.backendninja.curso.entity.Course;
 
 @Repository("courseJpaRepository")
 public interface CourseJpaRepository extends JpaRepository<Course, Serializable> {

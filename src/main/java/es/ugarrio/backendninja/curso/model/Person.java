@@ -1,4 +1,4 @@
-package es.ugarrio.model;
+package es.ugarrio.backendninja.curso.model;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;

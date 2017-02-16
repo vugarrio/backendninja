@@ -1,10 +1,10 @@
-package es.ugarrio.component;
+package es.ugarrio.backendninja.curso.component;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Component;
 
-import es.ugarrio.controller.Example3FormController;
+import es.ugarrio.backendninja.curso.controller.Example3FormController;
 
 @Component("ExampleComponent")   //Le indicamos a Spring que esta clase es un componente y que lo guarde en memoria
 public class ExampleComponent {

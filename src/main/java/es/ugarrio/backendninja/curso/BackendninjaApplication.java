@@ -1,4 +1,4 @@
-package es.ugarrio;
+package es.ugarrio.backendninja.curso;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
